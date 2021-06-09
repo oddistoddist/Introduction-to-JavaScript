@@ -17,7 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
+votingAge = 15
+if (votingAge > 18){
+  console.log(votingAge)
+}
 
 
 /*
@@ -31,7 +34,11 @@ Do the following:
    HINT: no function required
 */
 
-
+let b = 4
+const c = 5
+if (c > b){
+  console.log (b = c)
+}
 
 
 
@@ -45,7 +52,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let a = 1999
+a = parseInt(a)
+console.log(a)
 
 
 
@@ -58,8 +67,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a*b
   }
 
 
@@ -74,8 +83,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7
 }
 
 
@@ -107,9 +116,39 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight = 15, age = 1) {
+  let x;
+  if (age >= 2 / 12 && age <= 3 / 12) {
+    x = 0.01;
+    return weight * x;
   }
+  if (age >= 0.33 && age <= 0.58) {
+    x = 0.05;
+    return weight * x;
+  }
+  if (age > 7 / 12 && age < 1) {
+    x = 0.04;
+    return weight * x;
+  }
+  if (age >= 1) {
+    if (weight >= 5 && weight < 6) {
+      x = 0.05;
+      return weight * x;
+    }
+    if (weight >= 6 && weight <= 10) {
+      x = 0.04;
+      return weight * x;
+    }
+    if (weight >= 11 && weight <= 15) {
+      x = 0.03;
+      return weight * x;
+    }
+    if (weight > 15) {
+      x = 0.02;
+      return weight * x;
+    }
+  }
+}
 
 
 
@@ -134,11 +173,28 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
+
+    
+  
+function game(user, computer){ 
+  // var computersChoice = (Math.floor(10*(Math.random())))
+
+  // if (computersChoice <4 ){
+  //   return computer = "rock";
+
+  // } else if (computersChoice <7 && computersChoice >3) {
+  //   return computer = "paper";
+  // } else {
+  //   return computer = "scissors";
+  // } 
+  if ((user === "paper" && computer === "rock") || (user === "rock" && computer === "scissors") || (user === "scissors" && computer === "paper")){ return "you win!";
+  }else if (user === computer){
+    return "it's a tie"
+  }
+  else{
+    return "you lose!"
+  }
 }
-  
-  
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
